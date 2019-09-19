@@ -1,5 +1,3 @@
-![](https://media.giphy.com/media/kfLrsvExow4ixZ7ZLT/giphy.gif)
-
 # SwiftyUnsplashKit
 
 Lightweight Swift kit used to present Unsplash search view and select image along with its url. Adheres to [Unsplash API guidelines](https://help.unsplash.com/en/articles/2511245-unsplash-api-guidelines) of using hot-linked image urls and crediting author during image selection (similar to Trello). See [Unsplash API documentation](https://unsplash.com/documentation) for more details.
