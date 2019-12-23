@@ -11,4 +11,5 @@ import UIKit
 
 public protocol UnsplashPickerDelegate {
     func handleUnsplashImageSelected(image: UIImage, url: String)
+    func handleUnsplashSelectionCanceled()
 }

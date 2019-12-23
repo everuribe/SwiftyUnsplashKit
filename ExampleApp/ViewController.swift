@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController, UnsplashPickerDelegate {
+    func handleUnsplashSelectionCanceled() {
+        print("image selection canceled")
+    }
+    
     func handleUnsplashImageSelected(image: UIImage, url: String) {
         imageView.image = image
     }

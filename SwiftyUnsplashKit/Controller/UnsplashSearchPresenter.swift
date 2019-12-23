@@ -79,6 +79,10 @@ public class UnsplashSearchPresenter: NSObject {
             self.unsplashView = nil
             self.topConstraint = nil
             self.keyWindow = nil
+            
+            if let d: UnsplashPickerDelegate = self.delegate {
+                d.handleUnsplashSelectionCanceled()
+            }
         })
     }
     
