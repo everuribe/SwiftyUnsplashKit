@@ -252,7 +252,7 @@ class UnsplashSearchPickerView: UIView, UICollectionViewDelegate, UICollectionVi
             
             if let selectedImage: UIImage = cell.imageView.image, let url: String = cell.unsplashImageInfo?.imageUrl {
                 print("Did this work")
-                delegate.handleImageSelected(image: selectedImage, url: url)
+                delegate.handleUnsplashImageSelected(image: selectedImage, url: url)
                 presenter.closeUnsplashView()
             }
         }

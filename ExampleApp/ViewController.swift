@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UnsplashPickerDelegate {
-    func handleImageSelected(image: UIImage, url: String) {
+    func handleUnsplashImageSelected(image: UIImage, url: String) {
         imageView.image = image
     }
     
