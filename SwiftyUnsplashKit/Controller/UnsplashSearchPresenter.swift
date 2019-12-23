@@ -79,10 +79,6 @@ public class UnsplashSearchPresenter: NSObject {
             self.unsplashView = nil
             self.topConstraint = nil
             self.keyWindow = nil
-            
-            if let d: UnsplashPickerDelegate = self.delegate {
-                d.handleUnsplashSelectionCanceled()
-            }
         })
     }
     
@@ -118,6 +114,11 @@ public class UnsplashSearchPresenter: NSObject {
         unsplashView.isUserInteractionEnabled = false
         if finalLocation > 60 {
             closeUnsplashView()
+            
+            //Handle cancelling action
+            if let d: UnsplashPickerDelegate = self.delegate {
+                d.handleUnsplashSelectionCanceled()
+            }
         } else {
             topConstraint.constant = 0
             

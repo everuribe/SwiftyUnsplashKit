@@ -41,7 +41,7 @@ class UnsplashSearchPickerView: UIView, UICollectionViewDelegate, UICollectionVi
     private let searchCancelButton: UIButton = {
         let button: UIButton = UIButton()
         button.setTitle("Cancel", for: .normal)
-        button.setTitleColor(.gray, for: .normal)
+        button.setTitleColor(.darkGray, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16)
         button.addTarget(self, action: #selector(resetSearch), for: .touchUpInside)
         button.isEnabled = false
@@ -245,13 +245,10 @@ class UnsplashSearchPickerView: UIView, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
-        print("Did Select")
-        
         if let delegate: UnsplashPickerDelegate = presenter.delegate {
             let cell: UnsplashCell = collectionView.cellForItem(at: indexPath) as! UnsplashCell
             
             if let selectedImage: UIImage = cell.imageView.image, let url: String = cell.unsplashImageInfo?.imageUrl {
-                print("Did this work")
                 delegate.handleUnsplashImageSelected(image: selectedImage, url: url)
                 presenter.closeUnsplashView()
             }
