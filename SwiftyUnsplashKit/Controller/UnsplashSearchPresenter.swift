@@ -28,7 +28,7 @@ public class UnsplashSearchPresenter: NSObject {
 
     ///- parameter initialSearchTerms: Keyword(s) used for image search in initial UnsplashSearchPickerView presentation. For multiple keywords, separate with commas, no spaces.
     ///- parameter accessKey: The developer access key provided by Unsplash API for a specific developer and application.
-    init(initialSearchTerms: String, accessKey: String){
+    public required init(initialSearchTerms: String, accessKey: String){
         self.keywords = initialSearchTerms
         self.accessKey = accessKey
     }

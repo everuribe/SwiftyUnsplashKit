@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 public protocol UnsplashPickerDelegate {
-    func handleImageSelected(image: UIImage, url: String)
+    func handleUnsplashImageSelected(image: UIImage, url: String)
 }
