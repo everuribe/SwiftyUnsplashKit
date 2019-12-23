@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name = "SwiftyUnsplashKit"
-  spec.version = "0.0.4"
+  spec.version = "0.0.5"
   spec.summary = "Pod written in Swift kit used to present Unsplash search view and select image along with its url."
 
   spec.description = <<-DESC
